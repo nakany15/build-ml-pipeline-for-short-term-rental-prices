@@ -1,0 +1,33 @@
+name: basic_cleaning
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      input_artifact:
+        description: input data name ## ADD DESCRIPTION
+        type: string
+
+      output_artifact:
+        description: output artifact name ## ADD DESCRIPTION
+        type: string
+
+      output_type:
+        description: output file type ## ADD DESCRIPTION
+        type: string
+
+      output_description:
+        description: output data file description ## ADD DESCRIPTION
+        type: string
+
+      min_price:
+        description: minimum price threshold to truncate price ## ADD DESCRIPTION
+        type: float
+
+      max_price:
+        description: maximum price threshold to truncate price ## ADD DESCRIPTION
+        type: float
+
+    command: >-
+        python run.py   {input_artifact}   {output_artifact}  {output_type}  {output_description}  {min_price} {max_price}
