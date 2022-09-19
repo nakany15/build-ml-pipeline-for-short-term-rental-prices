@@ -439,7 +439,7 @@ Add it to the pipeline then run the pipeline. As usual, use the configuration fo
 **_HINT_**: The path to the step can
 be expressed as ``mlflow.run(f"{config['main']['components_repository']}/train_val_test_split", ...)``.
 
-You can see the parameters accepted by this step [here](https://github.com/udacity/build-ml-pipeline-for-short-term-rental-prices/blob/main/components/train_val_test_split/MLproject)
+You can see the parameters accepted by this step [here](https://github.com/nakany15/build-ml-pipeline-for-short-term-rental-prices/blob/main/components/train_val_test_split/MLproject)
 
 After you execute, you will see something like:
 
@@ -506,7 +506,7 @@ Go to the artifact section of the selected job, and select the
 ### Test
 Use the provided step ``test_regression_model`` to test your production model against the
 test set. Implement the call to this component in the `main.py` file. As usual you can see the parameters in the
-corresponding [MLproject](https://github.com/udacity/build-ml-pipeline-for-short-term-rental-prices/blob/main/components/test_regression_model/MLproject) 
+corresponding [MLproject](https://github.com/nakany15/build-ml-pipeline-for-short-term-rental-prices/blob/main/components/test_regression_model/MLproject) 
 file. Use the artifact `random_forest_export:prod` for the parameter `mlflow_model` and the test artifact
 `test_data.csv:latest` as `test_artifact`.
 
@@ -542,7 +542,7 @@ train the model on a new sample of data that our company received (``sample2.csv
 
 (be ready for a surprise, keep reading even if the command fails)
 ```bash
-> mlflow run https://github.com/[your github username]/build-ml-pipeline-for-short-term-rental-prices.git \
+> mlflow run https://github.com/nakany15/build-ml-pipeline-for-short-term-rental-prices.git \
              -v [the version you want to use, like 1.0.0] \
              -P hydra_options="etl.sample='sample2.csv'"
 ```
